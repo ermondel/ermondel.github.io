@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>Task 11: Form</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+
+<header>
+	<nav>
+		<a class="link-button" href="#"><span id="goback">Go back</span></a>
+		<a class="link-logo" href="#home" title="Go home"><img src="img/logo.jpg" alt="Logo"></a>
+		<a class="link-button" href="#"><span id="signin">Sign in</span></a>
+	</nav>
+</header>
+<form>
+    <div id="order-box">
+        <dl class="left">
+            <dt><img src="img/order.png" alt="Your order icon"> Your order</dt>
+            <dd>
+                <table>
+                    <tr>
+                        <th id="order-items">Items</th>
+                        <th id="order-details">Details</th>
+                        <th id="order-price">Price</th>
+                        <th id="order-delivery">Delivery</th>
+                    </tr>
+                    <tr>
+                        <td>2 documents</td>
+                        <td>2 languages</td>
+                        <td>$ 696.06</td>
+                        <td>48 hours</td>
+                    </tr>
+                </table>
+            </dd>
+        </dl>
+        <div class="center">
+            <button class="button" type="submit">Place order</button>
+            <button class="button">Print a quote</button>
+        </div>
+        <dl class="right">
+            <dt><img src="img/help.png" alt="Help center icon"> Help center</dt>
+            <dd>
+                If you need assistance while placing your order, contact one of our beloved Project Manager by phone or email.
+                <address>
+                    <a href="tel:+9710555555">+971 (0) 555 555</a>
+                    <a href="mailto:help@qtest.com">help@qtest.com</a>
+                </address>
+            </dd>
+        </dl>
+    </div>
+    <div id="translate-box-legend"><strong>Select what you want to translate</strong></div>
+    <div id="translate-box">
+        <label class="big-radio">
+            <input type="radio" required name="objtranslate" value="website">
+            <span><span id="s-website">Website</span></span>
+        </label>
+
+        <label class="big-radio">
+            <input type="radio" required name="objtranslate" value="documents">
+            <span><span id="s-documents">Documents</span></span>
+        </label>
+
+        <label class="big-radio">
+            <input type="radio" required name="objtranslate" value="socialaccount">
+            <span><span id="s-socialaccount">Social Account</span></span>
+        </label>
+    </div>
+    <div id="fieldset-wrapper">
+	<fieldset>
+        <legend><span>Upload your documents</span> <em>(Doc, Docs, Text, PDF, Markdown)</em></legend>
+        <div class="button file-upload"><span>Upload a new file</span><input type="file" id="fileupload"></div>
+        <div class="files-upload-box">
+            <table>
+            <tr>
+                <th class="file-name">File name</th>
+                <th class="file-size">File size</th>
+                <th class="num-words">Number of words</th>
+                <th class="file-remove">Remove</th>
+            </tr>
+            <tr>
+                <td class="file-name">business_operations.docx</td>
+                <td class="file-size">78kb</td>
+                <td class="num-words">842</td>
+                <td class="file-remove"><button class="button-delete">Del</button></td>
+            </tr>
+            <tr>
+                <td class="file-name">business_financial.docx</td>
+                <td class="file-size">78kb</td>
+                <td class="num-words">842</td>
+                <td class="file-remove"><button class="button-delete">Del</button></td>
+            </tr>
+            </table>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend><span>Choose your languages pairings</span></legend>
+        
+        <dl class="languages-box">
+            <dt>FROM</dt>
+            <dd>
+                <label class="select">
+                    <select>
+                        <option>English</option>
+                        <option>Spanish</option>
+                        <option>Russian</option>
+                    </select>
+                </label>
+            </dd>
+        </dl>
+        <dl class="languages-box">
+            <dt>TO</dt>
+            <dd>
+                <label class="select">
+                    <select>
+                        <option>Arabic</option>
+                        <option>English</option>
+                        <option>Spanish</option>
+                        <option>Russian</option>
+                    </select>
+                </label>
+            </dd>
+            <dd>
+                <div class="select-box">
+                    <label class="select">
+                        <select>
+                            <option>Kurdish</option>
+                            <option>English</option>
+                            <option>Spanish</option>
+                            <option>Russian</option>
+                        </select>
+                    </label>
+                    <button class="button-delete">Del</button>
+                </div>
+            </dd>
+            <dd>
+                <button class="button">+ Add</button>
+            </dd>
+        </dl>
+    </fieldset>
+    <fieldset class="left">
+        <legend><span>Select your desired tone</span></legend>
+        <label class="common-radio">
+            <input type="radio" required name="tone" value="casual">
+            <span><span id="s-casual">Friendly/Casual</span></span>
+        </label>
+        <label class="common-radio">
+            <input type="radio" required name="tone" value="pro">
+            <span><span id="s-pro">Corporate/Pro</span></span>
+        </label>
+        <label class="common-radio">
+            <input type="radio" required name="tone" value="formal">
+            <span><span id="s-formal">Media/Formal</span></span>
+        </label>
+    </fieldset>
+    <fieldset class="right">
+        <legend><span>Tell us how urgent this job is</span></legend>
+        <div class="range-wrapper">
+            <input type="range" name="urgent" min='0' max='100' step='25' value="50"/>
+        </div>
+        <div class="range-legend">
+            <div class="range-legend-left">I got time</div>
+            <div class="range-legend-center">Average</div>
+            <div class="range-legend-right">Yesterday</div>
+        </div>
+        <dl class="range-info">
+            <dt><img src="img/info.png" alt="Timeline info icon"> Timeline info</dt>
+            <dd>With an <strong>AVERAGE</strong> timeline set up, our expert translator can take a reasonable amont of time perfecting your translation.</dd>
+        </dl>
+    </fieldset>
+    <fieldset>
+        <legend><span>Sign up and choose a payment method</span></legend>
+
+        <p id="sign-in-invitation">Already have an account with us? <a href="#">Sign in</a>.</p>
+
+        <div id="payment-form">
+            <p id="pf-a">
+                <label class="common-payment">
+                <span>Full name </span><input type="text" id="username" name="username" required pattern="[A-Za-z' -]{2,40}"></label></p>
+            <p id="pf-b">
+                <label class="common-payment">
+                <span>Email adress </span><input type="email" id="usermail" name="usermail" required></label></p>
+            <p id="pf-c">
+                <label class="common-payment">
+                <span>Choose a password </span><input type="password" id="password" name="password" required pattern=".{6,40}"></label></p>
+        
+            <p id="pf-d">
+                <label class="common-radio"><input type="radio" required name="payment" value="visa">
+                <span><span id="s-visa">Visa Mastercard</span></span></label>
+                <label class="common-radio"><input type="radio" required name="payment" value="paypal">
+                <span><span id="s-paypal">Pay Pal</span></span></label>
+                <label class="common-radio"><input type="radio" required name="payment" value="amazon">
+                <span><span id="s-amazon">Amazon</span></span></label>
+            </p>
+
+            <p id="pf-z">
+                <label class="common-payment">
+                <span>Card number </span><input type="text" id="cardnumber" name="cardnumber" required pattern="[0-9]{4}[ -]*[0-9]{4}[ -]*[0-9]{4}[ -]*[0-9]{4}"></label></p>
+            <p id="pf-h">
+                <label class="common-payment">
+                <span>Expiry date </span><input type="text" id="cardexpiration" name="cardexpiration" value="DD/MM/YY" required pattern="[0-9]{2}/[0-9]{2}/[0-9]{2}"></label></p>
+            <p id="pf-i">
+                <label class="common-payment">
+                <span>Code </span><input type="text" id="cardcode" name="cardcode" required pattern="[0-9]{3}"></label></p>
+        </div>
+    </fieldset>
+    </div>
+    <div id="buttons-box">
+        <label>
+            <input type="checkbox" required checked name="license">
+            <span>I agree to the <a href="#">Terms & Conditions</a></span>
+        </label>
+        <button class="button" type="submit">Place order</button>
+        <button class="button">Print a quote</button>
+    </div>
+</form>
+<div id="footer-wrapper">
+	<footer>
+		<dl id="footer-about">
+			<dt><img src="img/heart.png" alt="What we do icon">What we do</dt>
+			<dd><em>We provide a full range of language services icluding content development, document, website, and social media accounts translations.</em></dd>
+		</dl>
+		<dl id="footer-address">
+			<dt><img src="img/compas.png" alt="Our main office icon">Our main office</dt>
+			<dd>
+				<address>
+                    <ul>
+                    	<li>Dubai, UAE</li>
+                    	<li>P.O. Box: 502735</li>
+                    	<li>Phone: +971 (0) 44278128</li>
+                    </ul>
+                </address>
+			</dd>
+		</dl>
+		<dl id="footer-social">
+			<dt><img src="img/graph.png" alt="Connect with us icon">Connect with us</dt>
+			<dd>
+				<ul>
+                    <li><a href="#" class="link-facebook"><span>Facebook</span></a></li>
+                    <li><a href="#" class="link-twitter"><span>Twitter</span></a></li>
+                    <li><a href="#" class="link-linkedin"><span>Linkedin</span></a></li>
+                </ul>
+			</dd>
+		</dl>
+	</footer>
+</div>
+
+</body>
+</html>
