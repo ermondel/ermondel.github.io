@@ -150,17 +150,26 @@ form { background-color: white; margin-bottom: 6%; counter-reset: fieldsetCounte
    ========================================================================== */
 #order-box { display: flex; flex-wrap: wrap; padding-left: 6%; padding-right: 4%; 
 margin-bottom: 9%; border-bottom: 1px solid #E4E8F0; }
+
+/**
+ * сетка
+ */
 #order-box .left { padding-top: 34px; padding-bottom: 20px; flex-basis: 50%; }
 #order-box .center { padding-top: 24px; flex-basis: 20%; }
 #order-box .right { padding-top: 28px; padding-bottom: 20px; flex-basis: 23%; padding-left: 7%; }
 
 /**
+ * надпись (над табличкой или хелпбоксом)
+ */
+#order-box .order-box-legend { margin-bottom: 15px; text-transform: uppercase; font-size: 0.85em; font-weight: bold; }
+
+/**
  * иконки
  */
-#order-box .left dt { position: relative; }
-#order-box .left dt img { position: absolute; width: 13px; width:17px; left: -28px; top: -5px; z-index: 1; }
-#order-box .right dt { position: relative; }
-#order-box .right dt img { position: absolute; width: 20px; width:20px; left: -38px; top: -5px; z-index: 1; }
+#order-box .left .order-box-legend { position: relative; }
+#order-box .left .order-box-legend img { position: absolute; width: 13px; width:17px; left: -28px; top: -5px; z-index: 1; }
+#order-box .right .order-box-legend { position: relative; }
+#order-box .right .order-box-legend img { position: absolute; width: 20px; width:20px; left: -38px; top: -5px; z-index: 1; }
 
 /**
  * таблица заказа
@@ -181,7 +190,7 @@ margin-bottom: 9%; border-bottom: 1px solid #E4E8F0; }
  * саппорт заказа
  */
 #order-box .right { background: url('../img/pix.png') repeat-y; }
-#order-box .right dd { font-size: 0.9em; line-height: 1.5em; }
+#order-box .right .order-box-content { font-size: 0.9em; line-height: 1.5em; }
 #order-box .right address { margin-top: 1em; }
 #order-box .right address a { text-decoration: none; font-style: normal; font-weight: bold; color: #7B7D91; }
 #order-box .right address a:hover { text-decoration: underline; }
@@ -264,27 +273,33 @@ td.file-name { background: url('../img/file-upload.png') no-repeat left top; pad
 /* Форма выбора языков перевода.
    ========================================================================== */
 /**
- * hack: блок dl чуть меньше основного полотна и плавает посередине него,
+ * hack: блок languages-box-legend чуть меньше основного полотна и плавает посередине него,
  * это для красивой модуляции селектов, иначе при уменьшии браузера они 
- * будут падать в некрасивую лесенку; (dt идет абсолютом).
+ * будут падать в некрасивую лесенку; (languages-box-legend идет абсолютом).
  * padding-bottom (вместо margin-bottom) из-за особенности float в IE (Edge).
  */
 .languages-box { width: 89%; margin-left: auto; margin-right: auto; padding-bottom: 90px; position: relative; clear: both; }
-.languages-box dt { position: absolute; height: 50px; line-height: 50px; width: 40px; top: 0px; left: -60px; z-index: 2; text-align: right; }
+.languages-box .languages-box-legend { position: absolute; height: 50px; line-height: 50px; width: 40px; 
+top: 0px; left: -60px; z-index: 2; text-align: right; margin-bottom: 15px; text-transform: uppercase; font-size: 0.85em; font-weight: bold; }
+
 /**
- * dd и селекты плавающие чтобы все это, включая корзинки, выстраивалось по-умолчанию в одну линию.
+ * languages-box-content и селекты плавающие чтобы все это, 
+ * включая корзинки, выстраивалось по-умолчанию в одну линию.
  * hack: margin-bottom ставим именно .select а не .select-box (у которого он не станет работать).
  */
-.languages-box dd { float: left; margin-right: 25px; }
+.languages-box .languages-box-content { float: left; margin-right: 25px; }
 .languages-box .select { float: left; margin-bottom: 15px; }
+
 /**
  * блок со-держащий :-) селект и корзинку вместе
  */
 .languages-box .select-box { float: left; margin-right: 15px; }
+
 /**
  * кнопка удаления
  */
 .languages-box .button-delete { height: 50px; width: 35px; }
+
 /**
  * кнопка добавления
  */
@@ -326,13 +341,14 @@ fieldset.right .range-legend .range-legend-right { float: left; width: 33%; text
 .range-info dt { margin-bottom: 6%; }
 .range-info dd { font-size: 0.9em; line-height: 1.5em; }
 .range-info dd strong { color: orange; }
+
 /**
  * иконки
  */
 .range-info dt { position: relative; }
 .range-info dt img { position: absolute; width: 20px; width:20px; left: -34px; top: -5px; z-index: 1; }
 
-/* payment form
+/* Элементы платежной информации
    ========================================================================== */
 /**
  * Небольшая строка текста над формой.
@@ -420,22 +436,39 @@ width: 15px; height: 14px; margin : 0 13px 0 0; background: url("../img/chekbox.
 #buttons-box label a:hover { text-decoration: none; }
 #buttons-box button { margin-bottom: 4%; }
 
-/* footer
+/* Футер 
+ * note: флекс на несколько блоков.
    ========================================================================== */
 footer { padding-top: 5%; color: #B3B9D7; display: flex; justify-content: space-between; flex-wrap: wrap; 
 background: url('../img/footer-logo.png') no-repeat right 50%; }
+
+/**
+ * сетка
+ */
 footer #footer-about { flex-basis: 32%; }
 footer #footer-address { flex-basis: 29%; }
 footer #footer-social { flex-basis: 39%; }
-footer dl dt { padding-left: 40px; margin-bottom: 20px; }
-footer dl dd { padding-left: 40px; padding-right: 100px; font-size: 0.85em; line-height: 1.4em; margin-bottom: 20%; }
-footer dt { position: relative; }
-footer dt img { position: absolute; left: 0px; top: -5px; z-index: 1; }
+
+/**
+ * блоки
+ */
+footer div .footer-box-legend { padding-left: 40px; margin-bottom: 20px; text-transform: uppercase; font-size: 0.85em; font-weight: bold; }
+footer div .footer-box-content { padding-left: 40px; padding-right: 100px; font-size: 0.85em; line-height: 1.4em; margin-bottom: 20%; }
+footer .footer-box-legend { position: relative; }
+footer .footer-box-legend img { position: absolute; left: 0px; top: -5px; z-index: 1; }
+
+/**
+ * common
+ */
 footer address { font-style: normal; }
 footer ul, footer li { margin: 0; padding: 0; list-style: none; }
 footer li { margin-bottom: 0.8em; }
 footer a { display: block; color: #B3B9D7; text-decoration: none; padding-left: 30px; }
 footer a:hover span { text-decoration: underline; }
+
+/**
+ * иконки
+ */
 footer a.link-facebook { background: url('../img/facebook.png') no-repeat left center; }
 footer a.link-twitter { background: url('../img/twitter.png') no-repeat left center; }
 footer a.link-linkedin { background: url('../img/linkedin.png') no-repeat left center; }

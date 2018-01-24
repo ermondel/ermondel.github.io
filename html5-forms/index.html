@@ -17,9 +17,9 @@
 </header>
 <form>
     <div id="order-box">
-        <dl class="left">
-            <dt><img src="img/order.png" alt="Your order icon"> Your order</dt>
-            <dd>
+        <div class="left">
+            <div class="order-box-legend"><img src="img/order.png" alt="Your order icon"> Your order</div>
+            <div class="order-box-content">
                 <table>
                     <tr>
                         <th id="order-items">Items</th>
@@ -34,22 +34,22 @@
                         <td>48 hours</td>
                     </tr>
                 </table>
-            </dd>
-        </dl>
+            </div>
+        </div>
         <div class="center">
             <button class="button" type="submit">Place order</button>
             <button class="button">Print a quote</button>
         </div>
-        <dl class="right">
-            <dt><img src="img/help.png" alt="Help center icon"> Help center</dt>
-            <dd>
+        <div class="right">
+            <div class="order-box-legend"><img src="img/help.png" alt="Help center icon"> Help center</div>
+            <div class="order-box-content">
                 If you need assistance while placing your order, contact one of our beloved Project Manager by phone or email.
                 <address>
                     <a href="tel:+9710555555">+971 (0) 555 555</a>
                     <a href="mailto:help@qtest.com">help@qtest.com</a>
                 </address>
-            </dd>
-        </dl>
+            </div>
+        </div>
     </div>
     <div id="translate-box-legend"><strong>Select what you want to translate</strong></div>
     <div id="translate-box">
@@ -98,9 +98,9 @@
     <fieldset>
         <legend><span>Choose your languages pairings</span></legend>
         
-        <dl class="languages-box">
-            <dt>FROM</dt>
-            <dd>
+        <div class="languages-box">
+            <div class="languages-box-legend">FROM</div>
+            <div class="languages-box-content">
                 <label class="select">
                     <select>
                         <option>English</option>
@@ -108,11 +108,11 @@
                         <option>Russian</option>
                     </select>
                 </label>
-            </dd>
-        </dl>
-        <dl class="languages-box">
-            <dt>TO</dt>
-            <dd>
+            </div>
+        </div>
+        <div class="languages-box">
+            <div class="languages-box-legend">TO</div>
+            <div class="languages-box-content">
                 <label class="select">
                     <select>
                         <option>Arabic</option>
@@ -121,8 +121,8 @@
                         <option>Russian</option>
                     </select>
                 </label>
-            </dd>
-            <dd>
+            </div>
+            <div class="languages-box-content">
                 <div class="select-box">
                     <label class="select">
                         <select>
@@ -134,11 +134,11 @@
                     </label>
                     <button class="button-delete">Del</button>
                 </div>
-            </dd>
-            <dd>
+            </div>
+            <div class="languages-box-content">
                 <button class="button">+ Add</button>
-            </dd>
-        </dl>
+            </div>
+        </div>
     </fieldset>
     <fieldset class="left">
         <legend><span>Select your desired tone</span></legend>
@@ -218,13 +218,13 @@
 </form>
 <div id="footer-wrapper">
 	<footer>
-		<dl id="footer-about">
-			<dt><img src="img/heart.png" alt="What we do icon">What we do</dt>
-			<dd><em>We provide a full range of language services icluding content development, document, website, and social media accounts translations.</em></dd>
-		</dl>
-		<dl id="footer-address">
-			<dt><img src="img/compas.png" alt="Our main office icon">Our main office</dt>
-			<dd>
+		<div id="footer-about">
+			<div class="footer-box-legend"><img src="img/heart.png" alt="What we do icon">What we do</div>
+			<div class="footer-box-content"><em>We provide a full range of language services icluding content development, document, website, and social media accounts translations.</em></div>
+		</div>
+		<div id="footer-address">
+			<div class="footer-box-legend"><img src="img/compas.png" alt="Our main office icon">Our main office</div>
+			<div class="footer-box-content">
 				<address>
                     <ul>
                     	<li>Dubai, UAE</li>
@@ -232,20 +232,19 @@
                     	<li>Phone: +971 (0) 44278128</li>
                     </ul>
                 </address>
-			</dd>
-		</dl>
-		<dl id="footer-social">
-			<dt><img src="img/graph.png" alt="Connect with us icon">Connect with us</dt>
-			<dd>
+			</div>
+		</div>
+		<div id="footer-social">
+			<div class="footer-box-legend"><img src="img/graph.png" alt="Connect with us icon">Connect with us</div>
+			<div class="footer-box-content">
 				<ul>
                     <li><a href="#" class="link-facebook"><span>Facebook</span></a></li>
                     <li><a href="#" class="link-twitter"><span>Twitter</span></a></li>
                     <li><a href="#" class="link-linkedin"><span>Linkedin</span></a></li>
                 </ul>
-			</dd>
-		</dl>
+			</div>
+		</div>
 	</footer>
 </div>
-
 </body>
 </html>
