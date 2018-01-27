@@ -1,6 +1,6 @@
 /**
  * main.css
- * version 1.0
+ * version 1.1
  * comments on russian, sorry ¯\_(ツ)_/¯ 
  */
 
@@ -35,8 +35,9 @@ font-size: 0.80em; font-weight: bold; text-align: center;
 /**
  * Общий стиль кнопок: удаления
  */
-.button-delete { background: none; border: none; margin: 0; padding: 0; 
-background: url('../img/button-delete.png') no-repeat center center; color: transparent; }
+.button-delete { background: none; border: none; margin: 0; padding: 0; cursor: pointer; 
+background: url('../img/button-delete-3.png') no-repeat center top; color: transparent; }
+.button-delete:hover { background-position: center bottom; }
 
 /**
  * Общий стиль выпадающих списков (select)
@@ -59,14 +60,16 @@ height: 50px; width: 147px; padding-right: 48px; background-color: #F7F7FA; over
 
 /**
  * Общий стиль radio
+ * note: по необходимости ставим width по мере использования.
  */
-.common-radio { display: block; }
+.common-radio { display: block; /* background-color: tomato; */ }
 .common-radio span { display: block; width: 235px; height: 68px; text-align: center; border: 5px solid transparent; }
 .common-radio span span { height: 66px; line-height: 66px; width: 233px; border: 1px solid #C9D0E1; position: relative;
  background-color: #F7F7FA;
         border-radius: 4px;
    -moz-border-radius: 4px;
 -webkit-border-radius: 4px;
+cursor: pointer;
 }
 .common-radio input {display: none; }
 .common-radio input[type=radio]:checked + span { border-color: #76A7E1;
@@ -227,6 +230,7 @@ text-align: center; position: absolute; left: -70px; top: -8px; z-index: 1;
         border-radius: 4px;
    -moz-border-radius: 4px;
 -webkit-border-radius: 4px;
+cursor: pointer;
 }
 .big-radio input[name="objtranslate"]:checked + span { border-color: #76A7E1;
         border-radius: 9px;
@@ -298,7 +302,7 @@ top: 0px; left: -60px; z-index: 2; text-align: right; margin-bottom: 15px; text-
 /**
  * кнопка удаления
  */
-.languages-box .button-delete { height: 50px; width: 35px; }
+.languages-box .button-delete { margin: 18px 0px 18px 5px; }
 
 /**
  * кнопка добавления
@@ -312,9 +316,9 @@ top: 0px; left: -60px; z-index: 2; text-align: right; margin-bottom: 15px; text-
 #fieldset-wrapper fieldset.right legend { left: 70px; margin-bottom: 75px; }
 
 /**
- * Выбор тона
+ * Выбор тона - настройка вида radio buttons
  */
-fieldset.left .common-radio { margin-bottom: 15px; }
+fieldset.left .common-radio { margin-bottom: 15px; width: 245px; }
 #s-casual { background: url('../img/casual.png') no-repeat 15% center #F7F7FA; }
 #s-pro { background: url('../img/pro.png') no-repeat 15% center #F7F7FA; }
 #s-formal { background: url('../img/formal.png') no-repeat 15% center #F7F7FA; }
