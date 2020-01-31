@@ -38,56 +38,12 @@
   </head>
   <body>
     <main>
-      <img src="Kamianets.jpg" id="mainimg" alt="Photo of a medieval castle" />
+      <img src="Kamianets.jpg" alt="Photo of a medieval castle" />
       <div>
         <p>Serhii</p>
         <p>Web developer</p>
         <address>Ukraine, Kiev</address>
       </div>
     </main>
-
-    <script>
-      function draft() {
-        const mainimg = document.getElementById('mainimg');
-        const buttons = document.getElementById('buttons');
-
-        const galleryPathList = [
-          'img/im1.jpg',
-          'img/im2.jpg',
-          'img/im3.jpg',
-          'img/im4.jpg',
-          'img/im5.jpg',
-          'img/im6.jpg',
-          'img/im7.jpg',
-          'img/im8.jpg',
-          'img/im9.jpg',
-          'img/im10.jpg',
-          'img/im11.jpg',
-          'img/im12.jpg'
-        ];
-        const galleryLoadList = [];
-
-        function onClickButton(event) {
-          if (galleryPathList.length === galleryLoadList.length && event.target.value) {
-            mainimg.src = galleryLoadList[event.target.value - 1].src;
-          }
-        }
-
-        function loadItem() {
-          galleryLoadList.push(this);
-          if (galleryPathList.length === galleryLoadList.length) {
-            console.log('ALL LOADED');
-          }
-        }
-
-        buttons.addEventListener('click', onClickButton);
-
-        galleryPathList.forEach((imgPath, index, arr) => {
-          const newImg = document.createElement('img');
-          newImg.src = imgPath;
-          newImg.onload = loadItem;
-        });
-      }
-    </script>
   </body>
 </html>
