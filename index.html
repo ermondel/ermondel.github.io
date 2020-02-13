@@ -6,44 +6,39 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Web developer Serhii</title>
     <link rel="icon" type="image/png" href="favicon.png" />
-    <link rel="stylesheet" href="./normalize.css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,700&subset=latin,latin-ext" rel="stylesheet" type="text/css" />
-    <style>
-      body {
-        font-family: roboto, Arial, Helvetica, sans-serif;
-      }
-      main {
-        max-width: 960px;
-        margin: 0 auto;
-      }
-      img {
-        width: 100%;
-        height: auto;
-        border-bottom-right-radius: 650px 250px;
-        border-bottom-left-radius: 10px 10px;
-      }
-      div {
-        text-align: right;
-        color: LightSlateGray;
-        position: relative;
-        font-size: x-large;
-        font-weight: 300;
-        top: -120px;
-        margin-right: 2%;
-      }
-      address {
-        font-style: normal;
-      }
-    </style>
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <main>
-      <img src="Kamianets.jpg" alt="Photo of a medieval castle" />
-      <div>
-        <p>Serhii</p>
-        <p>Web developer</p>
-        <address>Ukraine, Kiev</address>
+      <div id="photobox">
+        <img src="./img/Kamianets.jpg" id="photo" alt="Photo of a medieval castle" />
+        <div id="btn-gallery">
+          <span>&squf;</span><span>&squf;</span><span>&squf;</span> <span>&squf;</span><span>&squf;</span><span>&squf;</span>
+          <span>&squf;</span><span>&squf;</span><span>&squf;</span>
+        </div>
+        <div id="gallery">
+          <img src="./img/Kamianets.jpg" alt="Photo of a medieval castle" />
+          <img src="./img/Kamianets.jpg" alt="Photo of a medieval castle" />
+          <img src="./img/Kamianets.jpg" alt="Photo of a medieval castle" />
+          <img src="./img/Kamianets.jpg" alt="Photo of a medieval castle" />
+          <img src="./img/Kamianets.jpg" alt="Photo of a medieval castle" />
+          <img src="./img/Kamianets.jpg" alt="Photo of a medieval castle" />
+          <img src="./img/Kamianets.jpg" alt="Photo of a medieval castle" />
+          <img src="./img/Kamianets.jpg" alt="Photo of a medieval castle" />
+          <img src="./img/Kamianets.jpg" alt="Photo of a medieval castle" />
+          <img src="./img/Kamianets.jpg" alt="Photo of a medieval castle" />
+        </div>
+      </div>
+      <div id="info">
+        <div id="info-inner">
+          <p>Serhii</p>
+          <p>Web developer</p>
+          <address>Ukraine, Kiev</address>
+        </div>
       </div>
     </main>
+    <script src="./app.js"></script>
   </body>
 </html>

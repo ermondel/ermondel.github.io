@@ -1,0 +1,90 @@
+body {
+  font-family: roboto, Arial, Helvetica, sans-serif;
+}
+main {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* gallery */
+#photobox {
+  position: relative;
+}
+#photobox #photo {
+  width: 100%;
+  height: auto;
+  border-bottom-right-radius: 650px 250px;
+  border-bottom-left-radius: 10px 10px;
+}
+#btn-gallery {
+  position: absolute;
+  z-index: 1;
+  top: 15px;
+  left: 15px;
+  padding: 5px;
+  width: 42px;
+  height: 42px;
+  background-color: white;
+  opacity: 0.2;
+  border-radius: 5px;
+  cursor: pointer;
+  visibility: hidden;
+}
+#btn-gallery span {
+  float: left;
+  width: 10px;
+  height: 10px;
+  margin: 2px;
+  background-color: darkslategray;
+  color: darkslategray;
+  font-size: 10px;
+  opacity: 1;
+}
+#btn-gallery:hover {
+  opacity: 0.4;
+}
+#btn-gallery:hover span {
+  background-color: grey;
+  color: grey;
+}
+#gallery {
+  background-color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  padding: 25px;
+  border-bottom-right-radius: 650px 250px;
+  border-bottom-left-radius: 10px 10px;
+  visibility: hidden;
+}
+#gallery img {
+  width: 20%;
+  float: left;
+  margin: 5px;
+  opacity: 0.7;
+  cursor: pointer;
+}
+#gallery img:hover {
+  opacity: 1;
+}
+
+/* info */
+#info {
+  position: relative;
+}
+#info-inner {
+  top: -120px;
+  right: 2%;
+  position: absolute;
+  text-align: right;
+  color: LightSlateGray;
+  font-size: x-large;
+  font-weight: 300;
+  z-index: 2;
+}
+#info address {
+  font-style: normal;
+}
