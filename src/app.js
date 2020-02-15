@@ -5,7 +5,18 @@ function gallery() {
   const gallerybox = document.getElementById('gallery');
   const photo = document.getElementById('photo');
 
-  const galleryPathList = ['img/im0.jpg', 'img/im1.jpg', 'img/im2.jpg', 'img/im3.jpg', 'img/im4.jpg', 'img/im5.jpg', 'img/im6.jpg'];
+  const galleryPathList = [
+    'img/im0.jpg',
+    'img/im1.jpg',
+    'img/im2.jpg',
+    'img/im3.jpg',
+    'img/im4.jpg',
+    'img/im5.jpg',
+    'img/im6.jpg',
+    'img/im7.jpg',
+    'img/im8.jpg',
+    'img/im9.jpg'
+  ];
   const galleryLoadList = [];
 
   const SHOW = true;
