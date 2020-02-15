@@ -8,6 +8,9 @@ function gallery() {
   const galleryPathList = ['img/im0.jpg', 'img/im1.jpg', 'img/im2.jpg', 'img/im3.jpg', 'img/im4.jpg', 'img/im5.jpg', 'img/im6.jpg'];
   const galleryLoadList = [];
 
+  const SHOW = true;
+  const HIDE = false;
+
   function toggleGallery(visible) {
     gallerybox.style.visibility = visible ? 'visible' : 'hidden';
     btnGallery.style.visibility = visible ? 'hidden' : 'visible';
@@ -27,18 +30,30 @@ function gallery() {
   }
 
   function onBtnGalleryClick() {
-    toggleGallery(true);
+    toggleGallery(SHOW);
   }
 
   function onBtnCloseClick() {
-    toggleGallery(false);
+    toggleGallery(HIDE);
+  }
+
+  function getFileName(path) {
+    const sep = path.lastIndexOf('/');
+    if (sep) {
+      return path.substring(sep + 1, path.lastIndexOf('.'));
+    } else {
+      return path.substring(0, path.lastIndexOf('.'));
+    }
   }
 
   function onGalleryClick(event) {
-    if (event.target.nodeName === 'IMG' && event.target.id[3]) {
-      const id = event.target.id[3];
-      photo.src = galleryLoadList[id].src;
-      toggleGallery(false);
+    if (event.target.nodeName === 'IMG') {
+      const imgName = getFileName(event.target.src);
+      const img = galleryLoadList.find((elem) => getFileName(elem.src) === imgName);
+      if (img) {
+        photo.src = img.src;
+        toggleGallery(HIDE);
+      }
     }
   }
 
@@ -56,17 +71,23 @@ function gallery() {
     addImagesToGallery();
   }
 
-  photobox.addEventListener('mouseenter', onPhotoboxOver);
-  photobox.addEventListener('mouseleave', onPhotoboxOut);
-  btnGallery.addEventListener('click', onBtnGalleryClick);
-  btnClose.addEventListener('click', onBtnCloseClick);
-  gallerybox.addEventListener('click', onGalleryClick);
+  function initListeners() {
+    photobox.addEventListener('mouseenter', onPhotoboxOver);
+    photobox.addEventListener('mouseleave', onPhotoboxOut);
+    btnGallery.addEventListener('click', onBtnGalleryClick);
+    btnClose.addEventListener('click', onBtnCloseClick);
+    gallerybox.addEventListener('click', onGalleryClick);
+  }
 
-  galleryPathList.forEach((imgPath, index, arr) => {
-    const newImg = document.createElement('img');
-    newImg.setAttribute('alt', 'photo');
-    newImg.setAttribute('id', 'im-' + index);
-    newImg.src = imgPath;
-    newImg.onload = loadItem;
-  });
+  function preloadGalleryImages() {
+    galleryPathList.forEach((imgPath, index, arr) => {
+      const newImg = document.createElement('img');
+      newImg.setAttribute('alt', 'photo');
+      newImg.src = imgPath;
+      newImg.onload = loadItem;
+    });
+  }
+
+  initListeners();
+  preloadGalleryImages();
 }
