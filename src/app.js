@@ -15,7 +15,12 @@ function gallery() {
     'img/im6.jpg',
     'img/im7.jpg',
     'img/im8.jpg',
-    'img/im9.jpg'
+    'img/im9.jpg',
+    'img/im10.jpg',
+    'img/im11.jpg',
+    'img/im12.jpg',
+    'img/im13.jpg',
+    'img/im14.jpg'
   ];
   const galleryLoadList = [];
 
